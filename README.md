@@ -1,5 +1,4 @@
 # SoftUni
-In this repository, I will upload code from Software University.
-I will not share full information about my task conditions, because it is private, only my source code.
-I will separate my content in modules.
-Here I show part of my journey in SoftUni.
+In this repository, I will upload my code from Software University.
+There will be no full information about the conditions of my assignments, because it is private, only source code.
+My content is separated in modules.
