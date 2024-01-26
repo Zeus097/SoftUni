@@ -6,13 +6,3 @@ There will be no full information about the conditions of my assignments, becaus
 It will be source code only.
 
 My content is separated in modules.
-,
-,
-,,
-,
-,,
-,,,
-,
-,
-,
-,
