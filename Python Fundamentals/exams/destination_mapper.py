@@ -1,12 +1,16 @@
 import re
 
-places = input()
-travel_points = 0
-valid_places = []
-pattern = r'(\=|\/)([A-Z][A-Z-a-z]{2,})\1'
-matches = re.finditer(pattern, places)
 
+places_on_the_map = input()
+travel_points = 0
+destination_collection = []
+pattern = r'([=/])([A-Z]{1}[A-Za-z]{2,})\1'
+matches = re.findall(pattern, places_on_the_map)
 for match in matches:
-    travel_points += len(match.group(2))
-    valid_places.append(match.group(2))
-print(f"Destinations: {', '.join(valid_places)}\nTravel Points: {travel_points}")
+    current_destination = match[1]
+    travel_points += len(current_destination)
+    destination_collection.append(current_destination)
+
+
+print(f"Destinations: {', '.join(destination_collection)}")
+print(f"Travel Points: {travel_points}")
