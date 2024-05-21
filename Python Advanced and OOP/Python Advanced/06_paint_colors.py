@@ -5,8 +5,8 @@ color_string = deque(input().split())
 
 main_colors = ["red", "yellow", "blue"]
 secondary_colors = {"orange": ["red", "yellow"],
-                 "purple": ["red", "blue"],
-                 "green": ["yellow", "blue"]}
+                    "purple": ["red", "blue"],
+                    "green": ["yellow", "blue"]}
 collected_colors = []
 
 while color_string:
