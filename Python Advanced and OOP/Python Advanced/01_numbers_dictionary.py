@@ -17,7 +17,10 @@ line = input()
 
 while line != "Remove":
     searched = line
-    print(numbers_dictionary[searched])
+    try:
+        print(numbers_dictionary[searched])
+    except KeyError:
+        print("The variable number does not exist")
 
     line = input()
 
