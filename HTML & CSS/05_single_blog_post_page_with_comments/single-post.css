@@ -1,0 +1,15 @@
+span.author {
+    font-weight: bold;
+}
+section {
+    background-color: gray;
+}
+.post-content {
+    text-shadow: 2px 4px 10px rgb(89, 89, 164);
+}
+.post-header {
+    color: red;
+}
+.post-header p {
+    color: gray;
+}
