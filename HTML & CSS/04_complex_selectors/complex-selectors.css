@@ -1,0 +1,42 @@
+a.firstlist {
+    color: rgb(49, 20, 76);
+    font-weight: 600;
+}
+.header {
+    color: black;
+    font-weight: 700;
+}
+header > span#firstspan {
+    color: brown;
+}
+header > span#secondspan {
+    color: brown;
+}
+header + section p {
+    background-color: rgb(179, 216, 218);
+}
+.highlighted ~ article {
+    font-style: normal;
+}
+ul > li.services {
+    font-style: italic;
+}
+article p:first-child {
+    color: rgb(0, 0, 0);
+}
+.image-container {
+    position: relative;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 520px;
+    bottom: 0px;
+    border: 8px solid red;
+    z-index: 10;
+    box-sizing: border-box;
+    
+}

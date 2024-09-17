@@ -1,0 +1,30 @@
+p.highlighted.paragraph {
+    color: rgb(0, 132, 255);
+    font-size: larger;
+}
+div #special {
+    background-color: rgb(241, 185, 72);
+    padding: 0px;
+}
+a.fancy1 {
+    border-color: rgb(0, 0, 0);
+    padding: 0px;
+    color: blue;
+}
+a.fancy2 {
+    border-color: rgb(0, 0, 0);
+    padding: 0px;
+    color: rgb(241, 140, 32);
+}
+p.blue.text {
+    font-style:normal;
+    font-weight:500;
+    color: #2900f7;
+}
+li.first.list {
+    color: rgb(91, 194, 159);
+}
+li.last.list {
+    color: rgb(218, 35, 50);
+    font-style: italic;
+}

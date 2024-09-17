@@ -1,0 +1,12 @@
+.spaced {
+    margin-right: 20px;
+}
+#header,
+#nav {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+header, section, footer {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #555553;
+}

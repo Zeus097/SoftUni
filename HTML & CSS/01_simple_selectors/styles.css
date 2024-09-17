@@ -1,0 +1,31 @@
+h1 {
+    background-color: blue;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+.highlight1 {
+    background-color: brown;
+}
+
+.highlight2 {
+    background-color: yellow;
+}
+
+.highlight3 {
+    background-color: orange;
+}
+
+#main-title {
+    color: white;
+}
+
+#special-paragraph {
+    color: green;
+}
+
+#div-style {
+    background-color: gray;
+}
