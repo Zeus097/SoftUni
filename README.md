@@ -24,4 +24,16 @@ Content is separated in Topics.
 
 # ![04_Python OOP Certificate](https://github.com/user-attachments/assets/512dcb73-59a6-47d4-962e-96ea66e37820)
 
-.........
+..........
+
+
+
+
+
+
+
+
+
+
+
+
