@@ -23,4 +23,4 @@ Content is separated in Topics.
 # ![03_Python Advanced Certificate](https://github.com/user-attachments/assets/e78b1502-138d-442d-9506-8cfafecc19e2)
 
 # ![04_Python OOP Certificate](https://github.com/user-attachments/assets/512dcb73-59a6-47d4-962e-96ea66e37820)
-.
+..
