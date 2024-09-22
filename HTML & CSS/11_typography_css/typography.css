@@ -1,0 +1,72 @@
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Helvetica, sans-serif;
+}
+
+p {
+    padding-bottom: 1.5rem;
+}
+
+ol ul{
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+header, h2 {
+    line-height: 1.2;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-family: Georgia;
+}
+
+hr {
+    border-color: gray;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+#square {
+    list-style-type: square;
+}
+
+#disc {
+    list-style-type: disc;
+}
+
+#circle {
+    list-style-type: circle;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove spacing between cells */
+}
+th, td {
+    border: 1px solid rgb(143, 153, 141); /* Add borders to cells */
+    padding: 8px;
+    text-align: left; /* Align text to the left */
+}
+th {
+    background-color: rgb(143, 153, 141); /* Add background color to headers */
+}
+
+#color {
+    background-color: rgb(231, 239, 231);
+}
+blockquote {
+    border-left: 3px solid rgb(219, 214, 214);
+}
+blockquote > p {
+    padding-left: 25px;
+    padding-top: 5px;
+    font-style: italic;
+    padding-bottom: 0px;
+}
+blockquote > span {
+    padding-top: 15px;
+    padding-left: 100%;
+    padding-bottom: 15px;
+}
