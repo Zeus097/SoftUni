@@ -1,0 +1,22 @@
+
+.visible {
+    overflow: visible;
+    border-top: 2px solid gray;
+    border-bottom:  2px solid black;
+    border-right:  2px solid black;
+    border-left:  2px solid black;
+    max-height: 110px;
+    max-width: 300px;
+}
+.hidden {
+    overflow: hidden;
+    border: 2px solid black;
+    max-height: 110px;
+    max-width: 300px;
+}
+.scroll {
+    overflow: scroll;
+    border: 2px solid black;
+    max-height: 110px;
+    max-width: 300px;
+}
