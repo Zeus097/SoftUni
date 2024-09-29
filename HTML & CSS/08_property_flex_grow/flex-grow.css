@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.flex-container {
+    width: 430px;
+    padding: 1em;
+    border: 2px solid blue;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.flex-item {
+    background: #eee;
+    padding: 20px;
+    border: 2px solid #000;
+}
+h1, h2, div.flex-container {
+    margin: 15px;
+}
+.flex-grow-one .flex-item{
+    flex-grow: 1;
+}
+.flex-grow-2nd-only .number-2  {
+    flex-grow: 1;
+}
+.flex-grow-proportional .number-1 {
+    flex-grow: 1;
+}
+.flex-grow-proportional .number-2 {
+    flex-grow: 2;
+}
+.flex-grow-proportional .number-3 {
+    flex-grow: 3;
+}
