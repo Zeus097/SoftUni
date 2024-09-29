@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.flex-container {
+    width: 430px;
+    padding: 1em;
+    border: 2px solid blue;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.flex-item {
+    background: #eee;
+    padding: 20px;
+    border: 2px solid #000;
+}
+h1, h2, div.flex-container {
+    margin: 15px;
+}
+.gap-row {
+    gap: 2em 0;
+}
+.gap-column {
+    gap: 0 2em;
+}
+.gap {
+    gap: 2em;
+}
