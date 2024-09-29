@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.flex-container {
+    width: 435px;
+    padding: 1em;
+    border: 2px solid blue;
+    display: flex;
+}
+.flex-item {
+    background: #eee;
+    padding: 20px;
+    border: 2px solid #000;
+}
+h1, h2, div.flex-container {
+    margin: 15px;
+}
+.flex-basis-5em .flex-item {
+    flex-basis: 5em;
+}
+
+
+.flex-shrink-zero .flex-item {
+    flex-basis: 5em;
+    flex-shrink: 0;
+    min-width: 7em;
+}
+.flex-grow-one .flex-item {
+    flex-basis: 5em;
+    flex-grow: 1;
+    min-width: 5em;
+}
+
+
+.flex-grow-one {
+    width: 900px;
+}
