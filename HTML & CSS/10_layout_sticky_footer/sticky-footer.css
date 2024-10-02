@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 20px;
+    display: flex;
+    border: 1px solid green;
+    min-height: 100vh;
+}
+
+.site {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.site * {
+    border: 2px solid blue;
+    padding: 2em;
+}
+.site > * + * {
+    margin-top: 2em;
+}
+.site-content {
+    flex: 1 1 auto;
+}
