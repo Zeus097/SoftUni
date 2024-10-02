@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    background: #FFF;
+}
+.nav-menu {
+    list-style-type: none;
+    width: 80%;
+    margin: 30px auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(179, 179, 179);
+    background-color: rgb(227, 222, 222);   
+    align-items: center;
+
+}
+.nav-item {
+    background-color: #FFF;
+    color: orange;
+    border: 1px solid rgb(179, 179, 179);
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin: 0 5px;
+    font-weight: 600;
+}
