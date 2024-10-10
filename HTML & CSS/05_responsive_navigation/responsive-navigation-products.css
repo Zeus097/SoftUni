@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-family:  "Lato", system-ui;
+    background-color: hsl(0deg 0% 93.33%);
+}
+.products {
+    width: 80%;
+    margin: 20px auto;
+    background: #FFF;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+header {
+    color: rgb(0, 154, 103);
+    background: #c1c1c1;
+    padding: 20px;
+}
+header ,
+main,
+footer {
+    flex: 1 0 100%;
+    text-align: center
+}
+footer {
+    background: #c1c1c1;
+    overflow: hidden;
+    padding: 10px;
+    color: #FFF;
+}

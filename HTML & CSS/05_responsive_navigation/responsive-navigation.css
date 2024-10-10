@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-family:  "Lato", system-ui;
+    background-color: hsl(0deg 0% 93.33%);
+}
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background: #FFF;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.container header {
+    align-items: center;
+    padding: 40px;
+    flex-grow: 1;
+}
+.container main {
+    display: flex;;
+    align-items: center;
+    margin: 20px;
+}
+.container main p {
+    align-items: flex-start;
+    margin: 10px;
+    background: rgb(242, 242, 242);
+    padding: 15px;
+    border-radius: 5px;
+}
