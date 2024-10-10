@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family:  "Lato", system-ui;
+    background-color: hsl(0deg 0% 93.33%);
+}
+.container {
+    background-color: #FFFF;
+    width: 80%;
+    margin: 20px auto;
+    padding: 40px 25px;
+    border-radius: 3px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+header {
+    border-bottom: hsl(0, 0%, 77%) solid 2px;
+    border-radius: 3px;
+}
+header h1,
+header h2,
+header h3,
+header h4,
+header h5,
+header h6 {
+    margin-bottom: 15px;
+}
+article main {
+    border-bottom: hsl(0, 0%, 77%) solid 2px;
+    border-radius: 3px;
+}
+article > main p {
+    padding: 15px 0px;
+}
+article > main:last-of-type {
+    padding-bottom: 15px;
+}
+aside h2,
+aside p {
+    padding: 15px 0px;
+}
+
+aside ul.type-filled-square {
+    list-style-type: square;
+    padding: 15px 40px 15px 40px;
+}
+aside ul.type-filled-circle {
+    list-style-type: disc;
+    padding: 15px 40px 15px 40px;
+}
+aside ul.type-empty-circle {
+    list-style-type: circle;
+    padding: 15px 40px 15px 40px;
+}
+aside ol {
+    padding: 15px 40px 15px 40px;
+}
+
+
+
+/* Styling for the table START*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #cacaca;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+/* Styling for the table END*/
+
+aside .citate {
+    margin-left: 30px;
+    border-left: hsl(0, 0%, 79%) solid 2px;
+    padding: 0px 20px;
+    font-style: italic;
+}
+aside .citate .author {
+    text-align: end;
+}
+aside footer {
+    margin-top: 10px;
+}
+aside::after {
+    color: blueviolet;
+}
