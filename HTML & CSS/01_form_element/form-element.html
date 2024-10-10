@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form element</title>
+    <link rel="stylesheet" href="form-element.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div>
+        <header>
+            <h1>The Form Element</h1>
+            <p>The form element represents a document section containing interactive controls for submitting information.</p>
+        </header>
+
+        <article>
+            <h2>Attribute - method="get" (default)</h2>
+            <p>Form data appended to the action URL with a ? separator.</p>
+
+            <form action="#" method="get">
+                Search
+                <input type="search">
+                <button type="submit">Submit</button>
+            </form>
+        </article>
+
+        <article>
+            <h2>Attribute - method="post" (default)</h2>
+            <p>Form data sent as the request body.</p>
+
+            <form action="#" method="post">
+                Search
+                <input type="search">
+                <button type="submit">Submit</button>
+            </form>
+        </article>
+
+    </div>
+
+</body>
+</html>
