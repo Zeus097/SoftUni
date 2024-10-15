@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="registration.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">                                                                                                               
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/305e1f6e92.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <form action="#" class="registrationForm">
+
+        <h2>Registration</h2>
+
+        <fieldset>
+
+            <legend>Login information</legend>
+
+            <p class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+                <small>example: john.doe@gmail.com</small>
+            </p>
+
+            <p class="field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+                <small>minimum 6 characters, letters and numbers, at least 1 special character</small>
+            </p>
+
+        </fieldset>
+
+
+        <fieldset>
+
+            <legend>Additional information</legend>
+
+            <p class="field">
+                <label for="date">Date of Birth</label>
+                <input type="text" id="date" name="date" required value="dd.mm.yyyy" /> 
+                <small>example: john.doe@gmail.com</small>
+                <i class="fa-regular fa-calendar"></i>
+            </p>
+
+        </fieldset>
+
+        <input type="submit" value="Login" />
+    </form>
+
+</body>
+</html>
+
+<!-- In line 43 its value, not placeholder because in the screenshot, the text is bolder -->

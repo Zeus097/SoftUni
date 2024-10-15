@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family:  "Lato", sans-serif;
+    background-color: hsl(0deg 0% 93.33%);
+}
+
+.registrationForm {
+    background: #FFF;
+    margin: 30px auto;
+    width: 400px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+fieldset {
+    margin: 20px 0px;
+    padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+
+legend {
+    padding: 0px 10px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    border: none;
+    border-bottom: 1px solid silver;
+    padding: 5px 0px;
+}
+
+small {
+    margin-top: 3px;
+    margin-bottom: 30px;
+    opacity: 0.6;
+    font-style: italic;
+    font-size: smaller;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.fa-calendar {
+    position: absolute;
+    right: 255px;
+    top: 458px;
+}
