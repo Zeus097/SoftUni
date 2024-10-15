@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family:  "Lato", system-ui;
+    background-color: hsl(0deg 0% 93.33%);
+}
+
+.loginForm {
+    background: #FFF;
+    margin: 30px auto;
+    padding: 20px;
+    width: 600px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+.field {
+    flex-grow: 1;
+    display: flex;
+}
+
+.field-name {
+    flex: 0 0 calc(30% - 30px);
+}
+
+.field-email {
+    flex: 0 0 calc(70% - 30px);
+}
+
+
+input[type="submit"] {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background: rgb(255, 140, 0);
+    border: 1px solid rgb(255, 140, 0);
+    color: #FFF;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 15px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    background: hsl(0deg 0% 93.33%);
+}
+
+input[type="email"] {
+    width: 100%;
+}
+
+@media (max-width: 400px){
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+    }
+}
