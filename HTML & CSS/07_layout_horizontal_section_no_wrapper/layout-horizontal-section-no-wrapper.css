@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body, input, select, button {
+    font: inherit;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0px 20px 0px;
+    gap: 30px;
+    margin: 10px 20px;
+}
+
+.container  * {
+    padding: 10px 0px 10px 0px;
+}
+
+.container div {
+    border: 1px solid blue;
+    
+}
+
+.container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container div h2 {
+    margin-left: -692px;
+}
+
+
+@media screen and (max-width: 599px) {
+    .container div {
+        width: fit-content;
+    }
+
+    .container div h2 {
+        margin-left: -487px;
+    }
+}
+
+
