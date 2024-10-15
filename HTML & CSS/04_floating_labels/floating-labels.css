@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family:  "Lato", sans-serif;
+    background-color: hsl(0deg 0% 93.33%);
+}
+
+.loginForm {
+    background: #FFF;
+    margin: 30px auto;
+    padding: 30px;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    margin-bottom: 60px;
+    font-size: small;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-password {
+    margin-top: 40px;
+}
+
+small {
+    margin: 2px 0px;
+    opacity: 0.5;
+    font-style: italic;
+    font-size: small;
+}
+
+label {
+    margin-bottom: -1px;
+}
+
+input[type="email"],
+input[type="password"] {
+    border: none;
+    border-bottom: 1px solid silver;
+    padding: 2px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: larger;
+}
