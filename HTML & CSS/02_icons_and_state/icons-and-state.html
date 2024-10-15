@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons and state</title>
+    <link rel="stylesheet" href="icons-and-state.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">                                                                                                               
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/305e1f6e92.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <form action="#" class="loginForm">
+        <fieldset>
+            
+            <legend>
+                <h1>Login</h1>
+            </legend>
+
+            <p class="field">
+                <label for="email">Email<strong><span aria-label="required">*</span></strong></label>
+                <input type="email" id="email" name="usermail" required />
+                <small class="example">example: konstantin.dankov@gmail.com</small>
+                <p class="email-icon"><i class="fa-solid fa-envelope"></i></p>
+            </p>
+
+            <p>
+                <label for="password">
+                    Password
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="password" id="password" name="password" required />
+                <small class="example">minimum 6 characters, letters and numbers, at least 1 special character</small>
+                <p class="password-key-icon"><i class="fa-sharp fa-solid fa-key"></i></p>
+            </p>
+
+            <input type="submit" value="Login" />
+
+        </fieldset>
+    </form>
+
+</body>
+</html>

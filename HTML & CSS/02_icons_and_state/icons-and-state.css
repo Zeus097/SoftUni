@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family:  "Lato", system-ui;
+    background-color: hsl(0deg 0% 93.33%);
+}
+
+.loginForm {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #FFF;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+legend {
+    font-weight: 800;
+    border-bottom: 2px solid silver;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    width: 120px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 5px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid silver;
+    border-radius: 3px;
+}
+
+label {
+    padding-bottom: 2px;
+}
+
+span {
+    color: rgb(255, 98, 0);
+    font-size: 800;
+    font-weight: 600;
+}
+
+.loginForm input {
+    border: 2px solid silver;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.loginForm input[type="submit"] {
+    border: 0;
+    background: darkorange;
+    color: #FFF;
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.example {
+    margin: 10px 0;
+    font-style: italic;
+    opacity: 0.6;
+    font-size: smaller;
+}
+
+.email-icon {
+    position: relative;
+    top: -112px;
+    left: 323px;
+}
+
+.password-key-icon {
+    position: relative;
+    top: -116px;
+    left: 323px;
+}
+
+@media (max-width: 600px) {
+    body  {
+        min-width: 600px;
+    }
+}
