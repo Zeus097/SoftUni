@@ -16,14 +16,5 @@ Content is separated in Topics.
 ### Certificats:
 
 
-# ![01_Programming Basics with Python](https://github.com/user-attachments/assets/be582a7b-58cd-4432-8901-ac3dbbf9e974)
+# ![062874DE-7284-4026-A976-B9EE8FFEEFD9](https://github.com/user-attachments/assets/5628e182-c1a1-42a6-958e-448cf850d89f)
 
-# ![02_Programming Fundamentals with Python](https://github.com/user-attachments/assets/552f1244-f803-4301-ae7c-ca81427e4271)
-
-# ![03_Python Advanced Certificate](https://github.com/user-attachments/assets/e78b1502-138d-442d-9506-8cfafecc19e2)
-
-# ![04_Python OOP Certificate](https://github.com/user-attachments/assets/512dcb73-59a6-47d4-962e-96ea66e37820)
-
-![05-JS Front-End-HTML CSS](https://github.com/user-attachments/assets/61e7e33c-b6e8-4890-8a70-7f0c45feb6ba)
-
-![06-JS Front-End](https://github.com/user-attachments/assets/b5669028-78a8-4b30-abeb-7c44690f8293)
