@@ -26,3 +26,4 @@ Content is separated in Topics.
 
 ![05-JS Front-End-HTML CSS](https://github.com/user-attachments/assets/61e7e33c-b6e8-4890-8a70-7f0c45feb6ba)
 
+![06-JS Front-End](https://github.com/user-attachments/assets/b5669028-78a8-4b30-abeb-7c44690f8293)
