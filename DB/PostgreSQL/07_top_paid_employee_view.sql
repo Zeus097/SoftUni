@@ -1,0 +1,6 @@
+CREATE VIEW test2 AS
+SELECT * FROM employees
+ORDER BY salary DESC LIMIT 1
+;
+SELECT * FROM test2
+;
