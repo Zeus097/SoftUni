@@ -1,10 +1,11 @@
 UPDATE
-    animals
+    cars
 SET
-    owner_id = (
-        SELECT id FROM owners WHERE id = 4
-    )
+    condition = 'C'
 WHERE
-    owner_id IS NULL
+    (mileage >= 800000 OR mileage IS NULL)
+        AND
+    year <= 2010
+        AND
+    NOT make = 'Mercedes-Benz'
 ;
-
