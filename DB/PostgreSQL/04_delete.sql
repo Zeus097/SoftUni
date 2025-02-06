@@ -1,8 +1,13 @@
-DELETE FROM volunteers_departments
-WHERE department_name = 'Education program assistant'
+DELETE FROM
+        clients
+WHERE
+    LENGTH(full_name) > 3
+        AND
+    id NOT IN (
+        SELECT 
+            client_id
+            FROM
+                courses
+        )
 ;
-
-/*
-    DELETE WITH CONSTRAINT
-*/
 
