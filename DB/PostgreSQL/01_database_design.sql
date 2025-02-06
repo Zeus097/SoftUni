@@ -1,56 +1,66 @@
-CREATE TABLE owners(
+CREATE TABLE addresses (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    phone_number VARCHAR(15) NOT NULL,
-    address VARCHAR(50)
+    name VARCHAR(100) NOT NULL
 )
 ;
 
-
-CREATE TABLE animal_types(
+CREATE TABLE categories (
     id SERIAL PRIMARY KEY,
-    animal_type VARCHAR(30) NOT NULL
+    name VARCHAR(10) NOT NULL
 )
 ;
 
-
-CREATE TABLE cages(
+CREATE TABLE clients (
     id SERIAL PRIMARY KEY,
-    animal_type_id INTEGER REFERENCES animal_types ON UPDATE CASCADE ON DELETE CASCADE NOT NULL
+    full_name VARCHAR(50) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL
 )
 ;
 
-
-CREATE TABLE animals(
+CREATE TABLE drivers (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(30) NOT NULL,
-    birthdate DATE NOT NULL,
-    owner_id INTEGER REFERENCES owners ON UPDATE CASCADE ON DELETE CASCADE,
-    animal_type_id INTEGER REFERENCES animal_types ON UPDATE CASCADE ON DELETE CASCADE NOT NULL
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    age INT NOT NULL,
+    rating NUMERIC(3, 2) DEFAULT 5.5,
+
+    CONSTRAINT ck_drivers_age
+    CHECK ( age > 0 )
 )
 ;
 
-
-CREATE TABLE volunteers_departments(
+CREATE TABLE cars (
     id SERIAL PRIMARY KEY,
-    department_name VARCHAR(30) NOT NULL
+    make VARCHAR(20) NOT NULL,
+    model VARCHAR(20),
+    year INT NOT NULL DEFAULT 1,
+    mileage INT DEFAULT 1,
+    condition CHAR(1) NOT NULL,
+    category_id INT REFERENCES categories ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+
+    CONSTRAINT ck_year_cars
+    CHECK ( year > 0 ),
+
+    CONSTRAINT ck_mileage_cars
+    CHECK ( mileage > 0 )
 )
 ;
 
-
-CREATE TABLE volunteers(
+CREATE TABLE courses (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    phone_number VARCHAR(15) NOT NULL,
-    address VARCHAR(50),
-    animal_id INTEGER REFERENCES animals ON UPDATE CASCADE ON DELETE CASCADE,
-    department_id INTEGER REFERENCES volunteers_departments ON UPDATE CASCADE ON DELETE CASCADE NOT NULL
+    from_address_id INT REFERENCES addresses ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+    start TIMESTAMP NOT NULL,
+    bill NUMERIC(10, 2) DEFAULT 10,
+    car_id INT REFERENCES cars ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+    client_id INT REFERENCES clients ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+
+    CONSTRAINT ck_bill_courses
+    CHECK ( bill > 0 )
 )
 ;
 
-
-CREATE TABLE animals_cages(
-    cage_id INTEGER REFERENCES cages ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
-    animal_id INTEGER REFERENCES animals ON UPDATE CASCADE ON DELETE CASCADE NOT NULL
+CREATE TABLE cars_drivers (
+    car_id INT REFERENCES cars ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+    driver_id INT REFERENCES drivers ON UPDATE CASCADE ON DELETE CASCADE NOT NULL
 )
 ;
