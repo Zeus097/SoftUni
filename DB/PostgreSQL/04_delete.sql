@@ -1,13 +1,8 @@
 DELETE FROM
-        clients
+    addresses
 WHERE
-    LENGTH(full_name) > 3
+    id % 2 = 0
         AND
-    id NOT IN (
-        SELECT 
-            client_id
-            FROM
-                courses
-        )
+    street LIKE '%r%'
 ;
 
