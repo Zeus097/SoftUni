@@ -1,11 +1,26 @@
 UPDATE
-    cars
+    addresses
 SET
-    condition = 'C'
+    country = 'Blocked'
 WHERE
-    (mileage >= 800000 OR mileage IS NULL)
-        AND
-    year <= 2010
-        AND
-    NOT make = 'Mercedes-Benz'
+    country LIKE 'B%'
 ;
+
+UPDATE
+    addresses
+SET
+    country = 'Test'
+WHERE
+    country LIKE 'T%'
+;
+
+UPDATE
+    addresses
+SET
+    country = 'In Progress'
+WHERE
+    country LIKE 'P%'
+;
+
+
+
