@@ -1,26 +1,23 @@
 UPDATE
-    addresses
+    reviews
 SET
-    country = 'Blocked'
+    rating = 10.0
 WHERE
-    country LIKE 'B%'
+    item_id = customer_id
 ;
 
 UPDATE
-    addresses
+    reviews
 SET
-    country = 'Test'
+    rating = 5.5
 WHERE
-    country LIKE 'T%'
+    customer_id > item_id
 ;
 
 UPDATE
-    addresses
+    reviews
 SET
-    country = 'In Progress'
+    rating = rating
 WHERE
-    country LIKE 'P%'
+    customer_id < item_id
 ;
-
-
-
