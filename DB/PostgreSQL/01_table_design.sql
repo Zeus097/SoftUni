@@ -1,83 +1,104 @@
-CREATE TABLE accounts(
+CREATE TABLE brands(
     id SERIAL PRIMARY KEY,
-    username VARCHAR(30) UNIQUE NOT NULL,
-    password VARCHAR(30) NOT NULL,
-    email VARCHAR(50) NOT NULL,
-    gender CHAR(1) NOT NULL,
-    age INT NOT NULL,
-    job_title VARCHAR(40) NOT NULL,
-    ip VARCHAR(30) NOT NULL
+    name VARCHAR(50) NOT NULL UNIQUE
+)
+;
 
-    CONSTRAINT ck_gender_char
-    CHECK ( gender = 'M' OR gender =  'F' )
-);
-
-CREATE TABLE addresses(
+CREATE TABLE classifications(
     id SERIAL PRIMARY KEY,
-    street VARCHAR(30) NOT NULL,
-    town VARCHAR(30) NOT NULL,
-    country VARCHAR(30) NOT NULL,
+    name VARCHAR(30) NOT NULL UNIQUE
+)
+;
 
-    account_id INT
-        REFERENCES accounts
-        ON UPDATE CASCADE
-        ON DELETE CASCADE
-        NOT NULL
-);
-
-CREATE TABLE photos(
+CREATE TABLE customers(
     id SERIAL PRIMARY KEY,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    address VARCHAR(150) NOT NULL,
+    phone VARCHAR(30) NOT NULL UNIQUE,
+    loyalty_card BOOLEAN NOT NULL DEFAULT FALSE
+)
+;
+
+CREATE TABLE items(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    quantity INT NOT NULL,
+    price DECIMAL(12, 2) NOT NULL, -- CHECK IF NOT WORKS 100% !
     description TEXT,
-    capture_date TIMESTAMP NOT NULL,
-    views INT DEFAULT 0 NOT NULL,
 
-    CONSTRAINT ck_views
-    CHECK ( views >= 0 )
-);
+    brand_id INT
+        REFERENCES brands
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT NULL,
 
-CREATE TABLE comments(
+    classification_id INT
+        REFERENCES classifications
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT NULL,
+
+    CONSTRAINT ck_items_quantity
+    CHECK ( quantity >= 0 ), -- CHECK IF NOT WORKS 100% !
+
+    CONSTRAINT ck_items_price
+    CHECK ( price > 0.00 ) -- CHECK IF NOT WORKS 100% !
+
+)
+;
+
+CREATE TABLE orders(
     id SERIAL PRIMARY KEY,
-    content VARCHAR(255) NOT NULL,
-    published_on TIMESTAMP NOT NULL,
-
-    photo_id INT
-        REFERENCES photos
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    customer_id INT
+        REFERENCES customers
         ON UPDATE CASCADE
         ON DELETE CASCADE
         NOT NULL
-);
+)
+;
 
-CREATE TABLE accounts_photos(
-    account_id INT
-        REFERENCES accounts
+CREATE TABLE reviews(
+    customer_id INT
+        REFERENCES customers
         ON UPDATE CASCADE
         ON DELETE CASCADE
         NOT NULL,
-
-    photo_id INT
-        REFERENCES photos
+    item_id INT
+        REFERENCES items
         ON UPDATE CASCADE
         ON DELETE CASCADE
         NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    rating DECIMAL(3, 1) NOT NULL DEFAULT 0.0,
 
-    CONSTRAINT pk_accounts_photos
-    PRIMARY KEY (account_id, photo_id)
+    CONSTRAINT pk_customer_item_id
+    PRIMARY KEY (customer_id, item_id), -- CHECK IF NOT WORKS 100% !
 
-);
+    CONSTRAINT ck_reviews_rating
+    CHECK ( rating <= 10.0 ) -- CHECK IF NOT WORKS 100%
+)
+;
 
-CREATE TABLE likes(
-    id SERIAL PRIMARY KEY,
-
-    photo_id INT
-        REFERENCES photos
+CREATE TABLE orders_items(
+    order_id INT
+        REFERENCES orders
         ON UPDATE CASCADE
         ON DELETE CASCADE
         NOT NULL,
-
-    account_id INT
-        REFERENCES accounts
+    item_id INT
+        REFERENCES items
         ON UPDATE CASCADE
         ON DELETE CASCADE
-        NOT NULL
-);
+        NOT NULL,
+    quantity INT NOT NULL,
+
+    CONSTRAINT pk_order_item_id
+    PRIMARY KEY (order_id, item_id), -- CHECK IF NOT WORKS 100% !
+    
+    CONSTRAINT ck_orders_items_quantity
+    CHECK ( quantity >= 0 )
+)
+;
 
