@@ -1,8 +1,8 @@
-DELETE FROM
-    addresses
-WHERE
-    id % 2 = 0
-        AND
-    street LIKE '%r%'
+DELETE FROM customers 
+WHERE id NOT IN (
+    SELECT
+        customer_id
+    FROM orders
+    )
 ;
 
