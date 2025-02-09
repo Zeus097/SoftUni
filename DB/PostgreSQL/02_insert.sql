@@ -1,10 +1,15 @@
-INSERT INTO addresses(street, town, country, account_id)
+INSERT INTO items(name, quantity, price, description, brand_id, classification_id)
 SELECT
-    username,
-    password,
-    ip,
-    age
+    CONCAT('Item', created_at),
+    customer_id,
+    rating * 5,
+    NULL,
+    item_id,
+    (SELECT MIN(item_id) FROM reviews) AS classification_id
 FROM
-    accounts
-WHERE
-    gender = 'F';
+    reviews
+ORDER BY
+    item_id
+LIMIT
+    10
+;
