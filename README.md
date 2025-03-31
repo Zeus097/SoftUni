@@ -16,6 +16,9 @@ Content is separated in Topics.
 ### Certificats:
 
 
+![08_Python_DB_ORM](https://github.com/user-attachments/assets/a8873258-050b-4201-b1ba-b837dddbb09e)
+
+
 # ![Collection](https://github.com/user-attachments/assets/66d9a133-4c54-4a3f-9d84-ac98bbb004b7)
 
 
