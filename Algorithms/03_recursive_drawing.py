@@ -1,31 +1,11 @@
-def drawing_figure(number):
-    if number <= 0:
+def recursive_drawing(n):
+    if n <= 0:
         return
 
-    print(number * '*')
-    drawing_figure(number - 1)
-    print(number * '#')
+    print(n * '*')
+    recursive_drawing(n - 1)
+    print(n * '#')
 
 
-number = int(input())
-drawing_figure(number)
-
-# Input: 2
-# Output:
-# **
-# *
-# #
-# ##
-
-# Input: 5
-# Output:
-# *****
-# ****
-# ***
-# **
-# *
-# #
-# ##
-# ###
-# ####
-# #####
+num = int(input())
+recursive_drawing(num)
